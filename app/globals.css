@@ -2,20 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* === Custom Global Styles === */
+
+/* Optional: Make images not draggable (for a more "app-like" feel) */
+img, svg {
+  user-drag: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
 }
 
+/* Make focus rings more visible for accessibility */
+:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* Optional: Custom font smoothing for a more premium look */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply antialiased;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Remove tap highlight on mobile for a cleaner look */
+body, button, a {
+  -webkit-tap-highlight-color: transparent;
 }
