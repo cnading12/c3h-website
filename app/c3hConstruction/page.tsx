@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,7 +13,6 @@ const PROJECTS = [
       "/images/projects/sloans-lake/Home2.jpeg",
       "/images/projects/sloans-lake/Kitchen.jpeg",
       "/images/projects/sloans-lake/Kitchen2.jpeg"
-
     ],
   },
   {
@@ -48,21 +47,25 @@ const PROJECTS = [
 export default function C3HConstruction() {
   // Track which image index is showing per project
   const [indexes, setIndexes] = useState<number[]>([0, 0, 0, 0]);
+  // Use useRef to store timer IDs, one per project
+  const intervals = useRef<Array<number | null>>([null, null, null, null]);
 
   // On hover, start cycling images for that project
   const handleMouseEnter = (idx: number) => {
-    const interval = setInterval(() => {
+    intervals.current[idx] = window.setInterval(() => {
       setIndexes((current) => {
         const updated = [...current];
         updated[idx] = (updated[idx] + 1) % PROJECTS[idx].images.length;
         return updated;
       });
     }, 1200);
-    (window as any)[`projectInterval${idx}`] = interval;
   };
 
   const handleMouseLeave = (idx: number) => {
-    clearInterval((window as any)[`projectInterval${idx}`]);
+    if (intervals.current[idx]) {
+      clearInterval(intervals.current[idx]!);
+      intervals.current[idx] = null;
+    }
     setIndexes((current) => {
       const updated = [...current];
       updated[idx] = 0;
@@ -76,7 +79,7 @@ export default function C3HConstruction() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
         {PROJECTS.map((project, idx) => (
           <Link
-            href={`/c3hConstruction/${project.slug}`} // <-- all lowercase for route
+            href={`/c3hConstruction/${project.slug}`}
             key={project.slug}
             className="group relative aspect-square block rounded-lg overflow-hidden shadow-lg"
             onMouseEnter={() => handleMouseEnter(idx)}
