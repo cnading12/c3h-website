@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-black py-10 px-6 text-center shadow-inner">
+    <footer className="bg-black py-1 px-6 text-center shadow-inner">
+      {/* Thin white line at top */}
       <div className="flex justify-center gap-6 mb-4">
         {/* Instagram */}
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

@@ -11,6 +11,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="flex-1">
             {children}
           </div>
+          {/* Thin white line ABOVE the footer, always at the very bottom */}
+          <div className="w-full h-px bg-white opacity-70" />
           <Footer />
         </div>
       </body>
