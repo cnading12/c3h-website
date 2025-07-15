@@ -174,7 +174,7 @@ export default function Commercial() {
           C3H Construction brings a wealth of expertise to Colorado’s commercial sector. We are trusted by clients for timely delivery, strict quality standards, and innovative solutions for every commercial need.
         </p>
         <blockquote className="italic text-gray-600 max-w-2xl mx-auto border-l-4 border-blue-200 pl-4 py-2">
-          "C3H transformed our business vision into a thriving reality. Their professionalism, communication, and results are unmatched." <br />
+          &quot;C3H transformed our business vision into a thriving reality. Their professionalism, communication, and results are unmatched.&quot; <br />
           <span className="text-gray-500">— Commercial Client, Colorado</span>
         </blockquote>
       </section>

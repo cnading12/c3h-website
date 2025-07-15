@@ -4,36 +4,27 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// HERO_SLIDES: Add/remove image/video slides here.
-const HERO_SLIDES = [
+// --- HERO SLIDES: Add/remove image/video slides here ---
+type HeroSlide =
+  | { type: 'image'; src: string }
+  | { type: 'video'; src: string; poster: string };
+
+const HERO_SLIDES: HeroSlide[] = [
   { type: 'video', src: '/images/multi-family/sloans-lake/1.mp4', poster: '/images/projects/sloans-lake/Home1.jpeg' },
   { type: 'image', src: '/images/multi-family/sloans-lake/2.jpg' },
   { type: 'image', src: '/images/multi-family/south-pearl/11.jpg' },
   { type: 'image', src: '/images/multi-family/south-pearl/5.jpeg' },
 ];
 
-const PROJECTS = [
-  {
-    name: "Sloans Lake Multi-Family",
-    slug: "sloans-lake",
-    video: {
-      src: "/images/multi-family/sloans-lake/1.mp4",
-      poster: "/images/multi-family/sloans-lake/2.jpg",
-    },
-  },
-  {
-    name: "South Pearl Multi-Family",
-    slug: "south-pearl",
-    images: [
-      "/images/multi-family/south-pearl/11.JPG",
-      "/images/multi-family/south-pearl/1.JPEG",
-      "/images/multi-family/south-pearl/2.JPEG",
-      "/images/multi-family/south-pearl/3.JPEG",
-      "/images/multi-family/south-pearl/4.JPEG",
-      "/images/multi-family/south-pearl/5.JPEG",
-      "/images/multi-family/south-pearl/6.jpG"
-    ],
-  },
+
+const SOUTH_PEARL_IMAGES = [
+  "/images/multi-family/south-pearl/11.JPG",
+  "/images/multi-family/south-pearl/1.JPEG",
+  "/images/multi-family/south-pearl/2.JPEG",
+  "/images/multi-family/south-pearl/3.JPEG",
+  "/images/multi-family/south-pearl/4.JPEG",
+  "/images/multi-family/south-pearl/5.jpeg",
+  "/images/multi-family/south-pearl/6.JPG"
 ];
 
 export default function MultiFamily() {
@@ -42,8 +33,9 @@ export default function MultiFamily() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
-    // Clear old event
+    // Detach old event
     if (videoRef.current) videoRef.current.onended = null;
+    // For video slide: advance on video end, not timer
     if (HERO_SLIDES[heroIndex].type === 'video') {
       if (videoRef.current) {
         videoRef.current.currentTime = 0;
@@ -52,9 +44,9 @@ export default function MultiFamily() {
           setHeroIndex((prev) => (prev + 1) % HERO_SLIDES.length);
         };
       }
-      // Don't auto-advance with timer for video
       return;
     }
+    // For images: timer-based auto-advance
     const timer = setInterval(() => {
       setHeroIndex((prev) => (prev + 1) % HERO_SLIDES.length);
     }, 5000);
@@ -71,14 +63,13 @@ export default function MultiFamily() {
     return () => window.removeEventListener('keydown', handleHeroKey);
   }, [handleHeroKey]);
 
-  // --- FEATURED PROJECTS LOGIC (only South Pearl hovers) ---
-  // Only for South Pearl
+  // --- FEATURED PROJECTS LOGIC (South Pearl hover slideshow only) ---
   const [southPearlIdx, setSouthPearlIdx] = useState(0);
   const intervalRef = useRef<number | null>(null);
 
   const handleSouthPearlEnter = () => {
     intervalRef.current = window.setInterval(() => {
-      setSouthPearlIdx((prev) => (prev + 1) % PROJECTS[1].images.length);
+      setSouthPearlIdx((prev) => (prev + 1) % SOUTH_PEARL_IMAGES.length);
     }, 1200);
   };
   const handleSouthPearlLeave = () => {
@@ -101,10 +92,8 @@ export default function MultiFamily() {
               muted
               playsInline
               loop={false}
-              className={`object-cover absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-                idx === heroIndex ? 'opacity-100 z-0' : 'opacity-0 z-0'
-              }`}
-              style={{ objectFit: 'cover' }}
+              className={`object-cover absolute inset-0 w-full h-full transition-opacity duration-1000 ${idx === heroIndex ? 'opacity-100 z-0' : 'opacity-0 z-0'
+                }`}
             />
           ) : (
             <Image
@@ -112,14 +101,14 @@ export default function MultiFamily() {
               src={slide.src}
               alt={`Multi-family hero ${idx + 1}`}
               fill
-              className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
-                idx === heroIndex ? 'opacity-100 z-0' : 'opacity-0 z-0'
-              }`}
+              className={`object-cover absolute inset-0 transition-opacity duration-1000 ${idx === heroIndex ? 'opacity-100 z-0' : 'opacity-0 z-0'
+                }`}
               priority={idx === 0}
               sizes="100vw"
             />
           )
         )}
+
         <div className="absolute inset-0 bg-black/30 z-10" />
         <div className="z-20 absolute inset-0 flex flex-col items-center justify-center">
           <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-4 text-white drop-shadow-xl text-center">
@@ -172,8 +161,8 @@ export default function MultiFamily() {
             className="group relative aspect-square block rounded-lg overflow-hidden shadow-lg"
           >
             <video
-              src={PROJECTS[0].video.src}
-              poster={PROJECTS[0].video.poster}
+              src="/images/multi-family/sloans-lake/1.mp4"
+              poster="/images/multi-family/sloans-lake/2.jpg"
               autoPlay
               muted
               loop
@@ -182,7 +171,7 @@ export default function MultiFamily() {
             />
             <div className="absolute inset-0 bg-black/30 transition" />
             <span className="absolute inset-0 flex items-center justify-center text-white text-2xl sm:text-3xl font-semibold drop-shadow-lg tracking-wide z-10">
-              {PROJECTS[0].name}
+              Sloans Lake Multi-Family
             </span>
           </Link>
           {/* South Pearl: Hover slideshow */}
@@ -193,8 +182,8 @@ export default function MultiFamily() {
             onMouseLeave={handleSouthPearlLeave}
           >
             <Image
-              src={PROJECTS[1].images[southPearlIdx]}
-              alt={PROJECTS[1].name}
+              src={SOUTH_PEARL_IMAGES[southPearlIdx]}
+              alt="South Pearl Multi-Family"
               fill
               className="object-cover transition-all duration-700 group-hover:scale-105"
               sizes="(max-width: 640px) 100vw, 50vw"
@@ -202,7 +191,7 @@ export default function MultiFamily() {
             />
             <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition" />
             <span className="absolute inset-0 flex items-center justify-center text-white text-2xl sm:text-3xl font-semibold drop-shadow-lg tracking-wide z-10">
-              {PROJECTS[1].name}
+              South Pearl Multi-Family
             </span>
           </Link>
         </div>
@@ -215,7 +204,7 @@ export default function MultiFamily() {
           With decades of experience, C3H Construction specializes in high-quality multi-family projects that elevate neighborhoods and exceed expectations. Our commitment to innovation, efficiency, and craftsmanship delivers homes that families and investors love.
         </p>
         <blockquote className="italic text-gray-600 max-w-2xl mx-auto border-l-4 border-blue-200 pl-4 py-2">
-          "We were blown away by the attention to detail and the finished result. Our new building is a cornerstone of the community." <br />
+           &quot;We were blown away by the attention to detail and the finished result. Our new building is a cornerstone of the community.&quot; <br />
           <span className="text-gray-500">— Multi-Family Client, Denver</span>
         </blockquote>
       </section>

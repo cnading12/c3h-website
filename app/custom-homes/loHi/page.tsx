@@ -14,7 +14,7 @@ const DESCRIPTION = `
 A stunning multi-family build on Sloans Lake featuring contemporary architecture, open living spaces, and premium finishes. Designed for modern Denver living, this project blends luxury with functionality just steps from the city’s favorite lake.
 `;
 
-export default function loHi() {
+export default function LoHi() {
   const [current, setCurrent] = useState(0);
 
   // Auto-advance every 5s

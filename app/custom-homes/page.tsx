@@ -184,7 +184,7 @@ export default function CustomHomes() {
           With over 35 years of experience, C3H Construction specializes in bespoke custom homes that exceed expectations. From initial consultation to handing over the keys, our team ensures every detail reflects your vision and our legacy of quality.
         </p>
         <blockquote className="italic text-gray-600 max-w-2xl mx-auto border-l-4 border-blue-200 pl-4 py-2">
-          "C3H built our dream home with absolute precision and professionalism. Every step of the process was seamless and enjoyable." <br />
+          &quot;C3H built our dream home with absolute precision and professionalism. Every step of the process was seamless and enjoyable.&quot; <br />
           <span className="text-gray-500">— C3H Homeowner, Denver</span>
         </blockquote>
       </section>
