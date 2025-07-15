@@ -37,7 +37,7 @@ const PROJECTS = [
   },
   {
     name: "LoHi Custom Home",
-    slug: "lohi",
+    slug: "loHi",
     images: [
       "/images/custom-homes/loHi/1.jpg",
       "/images/custom-homes/loHi/2.JPG",
