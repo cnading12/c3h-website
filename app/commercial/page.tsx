@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 // Hero slideshow images for commercial projects (not just the featured ones)
 const HERO_IMAGES = [
-  "/images/hero/commercial.jpg",
+  "/images/hero/Commercial.jpg",
   "/images/commercial/sloans-lake/2.jpg",
   "/images/commercial/sloans-lake/3.jpg",
   "/images/commercial/sloans-lake/4.jpg",
@@ -20,18 +20,18 @@ const PROJECTS = [
     name: "Sloans Lake CoWork & Event Space",
     slug: "merritt-cowork",
     images: [
-      "/images/developments/sloans-lake/1.jpg",
-      "/images/developments/sloans-lake/2.jpg",
-      "/images/developments/sloans-lake/3.jpg"
+      "/images/commercial/sloans-lake/1.jpg",
+      "/images/commercial/sloans-lake/2.jpg",
+      "/images/commercial/sloans-lake/3.jpg"
     ],
   },
   {
     name: "Ft. Collins Mixed Use Space",
     slug: "mixed-use",
     images: [
-      "/images/developments/ft-collins/1.jpg",
-      "/images/developments/ft-collins/2.jpg",
-      "/images/developments/ft-collins/3.jpg"
+      "/images/commercial/ft-collins/1.jpg",
+      "/images/commercial/ft-collins/2.jpg",
+      "/images/commercial/ft-collins/3.jpg"
     ],
   },
 ];

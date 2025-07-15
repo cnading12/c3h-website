@@ -4,12 +4,12 @@ import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
 const SOUTH_PEARL_IMAGES = [
-  "/images/multi-family/south-pearl/11.jpg",
+  "/images/multi-family/south-pearl/11.JPG",
   "/images/multi-family/south-pearl/1.JPEG",
-  "/images/multi-family/south-pearl/2.jpeg",
-  "/images/multi-family/south-pearl/3.jpeg",
-  "/images/multi-family/south-pearl/4.jpeg",
-  "/images/multi-family/south-pearl/5.jpeg",
+  "/images/multi-family/south-pearl/2.JPEG",
+  "/images/multi-family/south-pearl/3.JPEG",
+  "/images/multi-family/south-pearl/4.JPEG",
+  "/images/multi-family/south-pearl/5.JPEG",
   "/images/multi-family/south-pearl/6.jpg",
 ];
 

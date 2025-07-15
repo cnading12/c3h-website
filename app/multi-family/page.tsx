@@ -12,8 +12,8 @@ type HeroSlide =
 const HERO_SLIDES: HeroSlide[] = [
   { type: 'video', src: '/images/multi-family/sloans-lake/1.mp4', poster: '/images/projects/sloans-lake/Home1.jpeg' },
   { type: 'image', src: '/images/multi-family/sloans-lake/2.jpg' },
-  { type: 'image', src: '/images/multi-family/south-pearl/11.jpg' },
-  { type: 'image', src: '/images/multi-family/south-pearl/5.jpeg' },
+  { type: 'image', src: '/images/multi-family/south-pearl/11.JPG' },
+  { type: 'image', src: '/images/multi-family/south-pearl/5.JPEG' },
 ];
 
 

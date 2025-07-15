@@ -4,9 +4,9 @@ import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
 const SLOANS_IMAGES = [
-  "/images/developments/sloans-lake/1.jpg",
-  "/images/developments/sloans-lake/2.jpg",
-  "/images/developments/sloans-lake/3.jpg"
+  "/images/commercial/sloans-lake/1.jpg",
+  "/images/commercial/sloans-lake/2.jpg",
+  "/images/commercial/sloans-lake/3.jpg"
 ];
 
 const DESCRIPTION = `

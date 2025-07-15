@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const HERO_IMAGES = [
-  { src: '/images/hero/Custom-home.jpg', alt: 'Luxury Home 1' },
-  { src: '/images/hero/Commercial.jpg', alt: 'Luxury Home 2' },
-  { src: '/images/hero/Multi-family.jpg', alt: 'Luxury Home 3' },
+  { src: '/images/hero/Custom-home.jpg', alt: 'Custom-Home' },
+  { src: '/images/hero/Commercial.jpg', alt: 'Commercial Development' },
+  { src: '/images/hero/Multi-family.JPG', alt: 'Multi-Family Home' },
 ];
 
 export default function Home() {
@@ -161,7 +161,7 @@ export default function Home() {
           className="group relative block rounded-2xl overflow-hidden shadow-xl min-h-[260px] aspect-[4/3] focus:outline-none focus:ring-4 focus:ring-blue-200 transition-transform hover:scale-105"
         >
           <Image
-            src="/images/hero/multi-family.jpg"
+            src="/images/hero/Multi-family.JPG"
             alt="Multi-Family"
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"

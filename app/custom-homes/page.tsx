@@ -7,11 +7,11 @@ import Link from 'next/link';
 // Hero slideshow images (add as many as you want, not the featured projects)
 const HERO_IMAGES = [
   "/images/custom-homes/hero/1.jpg",
-  "/images/custom-homes/hero/2.jpeg",
-  "/images/custom-homes/hero/3.jpeg",
+  "/images/custom-homes/hero/2.JPEG",
+  "/images/custom-homes/hero/3.JPEG",
   "/images/custom-homes/hero/4.jpg",
   "/images/custom-homes/hero/5.jpg",
-  "/images/custom-homes/hero/6.jpg",
+  "/images/custom-homes/hero/6.JPG",
   "/images/custom-homes/hero/12.jpg",
   "/images/custom-homes/hero/8.jpg",
   "/images/custom-homes/hero/9.jpg",
@@ -20,7 +20,7 @@ const HERO_IMAGES = [
   "/images/custom-homes/hero/12.jpg",
   "/images/custom-homes/hero/13.jpg",
   "/images/custom-homes/hero/14.jpg",
-  "/images/custom-homes/hero/15.jpg",
+  "/images/custom-homes/hero/15.JPG",
   "/images/custom-homes/hero/16.jpg"
 
 ];
@@ -39,9 +39,9 @@ const PROJECTS = [
     name: "LoHi Custom Home",
     slug: "lohi",
     images: [
-      "/images/custom-homes/lohi/1.jpg",
-      "/images/custom-homes/lohi/2.jpg",
-      "/images/custom-homes/lohi/3.jpg"
+      "/images/custom-homes/loHi/1.jpg",
+      "/images/custom-homes/loHi/2.JPG",
+      "/images/custom-homes/loHi/3.jpg"
     ],
   },
 ];
