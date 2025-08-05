@@ -17,7 +17,6 @@ const HERO_IMAGES = [
   "/images/custom-homes/hero/9.jpg",
   "/images/custom-homes/hero/10.jpg",
   "/images/custom-homes/hero/11.jpg",
-  "/images/custom-homes/hero/12.jpg",
   "/images/custom-homes/hero/13.jpg",
   "/images/custom-homes/hero/14.jpg",
   "/images/custom-homes/hero/15.JPG",
@@ -27,21 +26,31 @@ const HERO_IMAGES = [
 
 const PROJECTS = [
   {
-    name: "Country Club Custom Home",
-    slug: "country-club",
+    name: "Hilltop Custom Home",
+    slug: "hilltop",
     images: [
-      "/images/custom-homes/country-club/1.jpg",
-      "/images/custom-homes/country-club/2.jpg",
-      "/images/custom-homes/country-club/3.jpg"
+      "/images/custom-homes/hilltop/2.webp",
+      "/images/custom-homes/hilltop/1.webp",
+      "/images/custom-homes/hilltop/3.webp",
+      "/images/custom-homes/hilltop/4.webp",
+      "/images/custom-homes/hilltop/5.webp",
+      "/images/custom-homes/hilltop/6.webp",
+      "/images/custom-homes/hilltop/7.webp",
+      "/images/custom-homes/hilltop/8.webp",
+      "/images/custom-homes/hilltop/9.webp"
     ],
   },
   {
-    name: "LoHi Custom Home",
-    slug: "loHi",
+    name: "Boulder Custom Home",
+    slug: "boulder",
     images: [
-      "/images/custom-homes/loHi/1.jpg",
-      "/images/custom-homes/loHi/2.JPG",
-      "/images/custom-homes/loHi/3.jpg"
+      "/images/custom-homes/boulder/1.jpg",
+      "/images/custom-homes/boulder/2.JPG",
+      "/images/custom-homes/boulder/3.jpg",
+      "/images/custom-homes/boulder/4.JPG",
+      "/images/custom-homes/boulder/5.jpg",
+      "/images/custom-homes/boulder/6.JPG",
+      "/images/custom-homes/boulder/7.jpg"
     ],
   },
 ];
