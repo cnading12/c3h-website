@@ -7,9 +7,9 @@ import { Menu, X } from 'lucide-react';
 
 const NAV_ITEMS = [
   { label: 'About', href: '/about' },
+  { label: 'Multi-Family', href: '/multi-family' },
   { label: 'Custom Homes', href: '/custom-homes' },
   { label: 'Commercial', href: '/commercial' },
-  { label: 'Multi-Family', href: '/multi-family' },
   { label: 'Contractor', href: '/contractor' },
   { label: 'Contact', href: '/contact' },
 ];

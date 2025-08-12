@@ -30,6 +30,7 @@ body {
 /* Prevent horizontal scroll on mobile */
 body {
   overflow-x: hidden;
+  background-color: black;
 }
 
 /* Remove tap highlight on mobile for a cleaner look */

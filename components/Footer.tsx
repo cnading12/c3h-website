@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-black py-1 px-6 text-center shadow-inner">
+    <footer className="bg-black py-1 px-6 text-center">
       {/* Thin white line at top */}
-      <div className="flex justify-center gap-6 mb-4">
+      <div className="flex justify-center">
         {/* Instagram */}
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <svg className="w-7 h-7 hover:scale-110 transition" fill="none" viewBox="0 0 24 24">
@@ -27,7 +27,7 @@ export default function Footer() {
           </svg>
         </a>
       </div>
-      <div className="text-gray-300 mb-2">info@c3h.us | (123) 456-7890</div>
+      <div className="text-gray-300 mb-2">lance.nading@c3hdenver.us | (303) 359-8337</div>
       <div className="text-gray-500 text-sm">
         © {new Date().getFullYear()} C3H Construction. All rights reserved.
       </div>
