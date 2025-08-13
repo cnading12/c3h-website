@@ -149,17 +149,23 @@ export default function AboutPage() {
         <section className="py-20">
           <div className="max-w-5xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="relative">
-                <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/images/about/stud.jpg"
-                    alt="Lance Nading, Founder of C3H Construction - Denver general contractor and third-generation builder"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
+              <div>
+                <div className="relative">
+                  <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/images/about/studs.jpg"
+                      alt="Lance Nading, Founder of C3H Construction - Denver general contractor and third-generation builder"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-600 rounded-lg opacity-10 -z-10"></div>
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-600 rounded-lg opacity-10 -z-10"></div>
+                <div className="mt-4 text-center">
+                  <p className="text-lg text-gray-700">My Web Developer and I (or son)</p>
+                  <p className="text-sm text-gray-500 mt-1">check out colenading.com for more awesome work</p>
+                </div>
               </div>
 
               <div className="space-y-8">

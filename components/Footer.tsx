@@ -2,9 +2,11 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-black py-1 px-6 text-center">
+    <footer className="bg-black py-12 px-6 text-center">
       {/* Thin white line at top */}
-      <div className="flex justify-center">
+      <div className="w-full h-px bg-white/20 mb-8"></div>
+      
+      <div className="flex justify-center space-x-6 mb-6">
         {/* Instagram */}
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <svg className="w-7 h-7 hover:scale-110 transition" fill="none" viewBox="0 0 24 24">
@@ -15,6 +17,7 @@ export default function Footer() {
             />
           </svg>
         </a>
+        
         {/* Facebook */}
         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <svg className="w-7 h-7 hover:scale-110 transition" fill="white" viewBox="0 0 24 24">
@@ -27,9 +30,29 @@ export default function Footer() {
           </svg>
         </a>
       </div>
-      <div className="text-gray-300 mb-2">lance.nading@c3hdenver.us | (303) 359-8337</div>
-      <div className="text-gray-500 text-sm">
-        © {new Date().getFullYear()} C3H Construction. All rights reserved.
+      
+      <div className="text-gray-300 mb-4">lance.nading@c3hdenver.us | (303) 359-8337</div>
+      
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-500 text-sm">
+        <div>© {new Date().getFullYear()} C3H Construction. All rights reserved.</div>
+        
+        <div className="hidden sm:block text-gray-600">•</div>
+        
+        <div className="flex items-center gap-2">
+          <span className="text-gray-600">Website by</span>
+          <a 
+            href="https://colenading.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="opacity-60 hover:opacity-100 transition-opacity duration-300"
+          >
+            <img 
+              src="/images/logo/cole.png" 
+              alt="Cole Nading Logo"
+              className="h-6 w-auto"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   );
