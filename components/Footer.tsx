@@ -4,8 +4,6 @@ export default function Footer() {
   return (
     <footer className="bg-black py-12 px-6 text-center">
       {/* Thin white line at top */}
-      <div className="w-full h-px bg-white/20 mb-8"></div>
-      
       <div className="flex justify-center space-x-6 mb-6">
         {/* Instagram */}
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
