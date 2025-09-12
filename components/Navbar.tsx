@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { label: 'Multi-Family', href: '/multi-family' },
   { label: 'Custom Homes', href: '/custom-homes' },
   { label: 'Commercial', href: '/commercial' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'Contractor', href: '/contractor' },
   { label: 'Contact', href: '/contact' },
 ];
