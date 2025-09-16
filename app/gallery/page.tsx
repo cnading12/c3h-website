@@ -24,7 +24,7 @@ const GALLERY_SECTIONS = {
   },
   kitchens: {
     title: "Kitchens", 
-    description: "Gourmet culinary spaces with custom cabinetry, premium appliances, and stunning countertops",
+    description: "Gourmet culinary spaces with custom cabinetry, premium new appliances, and stunning countertops",
     images: [
       "/images/gallery/kitchens/1.webp",
       "/images/gallery/kitchens/2.webp",
