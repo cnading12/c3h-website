@@ -226,7 +226,7 @@ export default function Gallery() {
             />
           ))}
           
-          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/10 z-10" />
           
           <div className="z-20 absolute inset-0 flex flex-col items-center justify-center px-6">
             <div className="text-center max-w-4xl">

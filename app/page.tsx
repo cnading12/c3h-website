@@ -44,7 +44,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         
-        {/* Open Graph / Social Media */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="C3H Denver | Luxury Home Builders & Commercial Construction" />
         <meta property="og:description" content="Premier Denver construction company specializing in luxury custom homes, commercial developments, and multi-family housing. 35+ years of excellence." />
@@ -52,19 +51,16 @@ export default function Home() {
         <meta property="og:url" content="https://c3hdenver.com" />
         <meta property="og:site_name" content="C3H Construction" />
         
-        {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="C3H Denver | Luxury Home Builders & Commercial Construction" />
         <meta name="twitter:description" content="Premier Denver construction company specializing in luxury custom homes, commercial developments, and multi-family housing. 35+ years of excellence." />
         <meta name="twitter:image" content="/images/hero/Custom-home.jpg" />
         
-        {/* Local SEO */}
         <meta name="geo.region" content="US-CO" />
         <meta name="geo.placename" content="Denver, Colorado" />
         <meta name="geo.position" content="39.7392;-104.9903" />
         <meta name="ICBM" content="39.7392, -104.9903" />
         
-        {/* Local Business Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -158,8 +154,8 @@ export default function Home() {
             />
           ))}
           
-          {/* Dynamic overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/30 z-10" />
+          {/* UPDATED: Much lighter overlay - from black/70-50-30 to black/40-20-10 */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/10 z-10" />
           
           {/* Animated particles background */}
           <div className="absolute inset-0 z-5">
@@ -186,7 +182,7 @@ export default function Home() {
                 </span>
               </h1>
               
-              <p className="text-xl sm:text-2xl text-gray-200 mb-8 font-light leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl sm:text-2xl text-white mb-8 font-light leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
                 Crafting extraordinary homes and developments with 35+ years of unmatched excellence
               </p>
 
