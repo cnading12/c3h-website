@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 const BOULDER_IMAGES = [
   "/images/custom-homes/boulder/1.jpg",
-  "/images/custom-homes/boulder/2.JPG",
+  "/images/custom-homes/boulder/2.jpg",
   "/images/custom-homes/boulder/3.jpg",
-  "/images/custom-homes/boulder/4.JPG",
+  "/images/custom-homes/boulder/4.jpg",
   "/images/custom-homes/boulder/5.jpg",
-  "/images/custom-homes/boulder/6.JPG",
+  "/images/custom-homes/boulder/6.jpg",
   "/images/custom-homes/boulder/7.jpg"
 ];
 
