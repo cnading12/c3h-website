@@ -119,7 +119,7 @@ export default function ContractorPage() {
                       <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                       <div>
                         <h3 className="font-semibold text-white mb-1">Reliable Partnership</h3>
-                        <p className="text-gray-400 text-sm">35+ years of trusted relationships with contractors</p>
+                        <p className="text-gray-400 text-sm">25+ years of trusted relationships with contractors</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">

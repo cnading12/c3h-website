@@ -137,7 +137,7 @@ export default function Contact() {
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h1 className="text-5xl sm:text-6xl font-bold mb-6">Let's Build Together</h1>
             <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-              Ready to start your next project? Our team is here to bring your vision to life with over 35 years of construction excellence.
+              Ready to start your next project? Our team is here to bring your vision to life with over 25 years of construction excellence.
             </p>
           </div>
         </section>

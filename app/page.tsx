@@ -183,7 +183,7 @@ export default function Home() {
               </h1>
               
               <p className="text-xl sm:text-2xl text-white mb-8 font-light leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
-                Crafting extraordinary homes and developments with 35+ years of unmatched excellence
+                Crafting extraordinary homes and developments with 25+ years of unmatched excellence
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

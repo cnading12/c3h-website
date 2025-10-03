@@ -330,7 +330,7 @@ export default function Commercial() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-zinc-900 rounded-sm border border-zinc-800">
-                <div className="text-3xl font-bold text-white mb-2">30+</div>
+                <div className="text-3xl font-bold text-white mb-2">25+</div>
                 <div className="text-gray-300 font-medium">Years Experience</div>
               </div>
               <div className="text-center p-6 bg-zinc-900 rounded-sm border border-zinc-800">
